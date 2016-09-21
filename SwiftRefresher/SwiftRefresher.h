@@ -21,7 +21,18 @@ func productsDiff(in theArray: [Int]) -> [Int] {
     }
     
     productsDiff(in: [10, 4, 1, 6, 2])
-
     
     
+    func dedupeSortedArray(in thisArray: [Int]) -> ([Int], Int) {
+        var thisNewArray: [Int] = []
+        for number in thisArray {
+            if (thisArray.contains(number) && !thisNewArray.contains(number)) {
+                thisNewArray.append(number)
+            } else if (thisArray.contains(number) && thisNewArray.contains(number)) {
+            }
+        }
+        print(thisNewArray)
+        return (thisNewArray, thisNewArray.count)
+    }
     
+    dedupeSortedArray(in: [1,  4,  21, 21, 50, 50, 50, 50, 100, 101])
